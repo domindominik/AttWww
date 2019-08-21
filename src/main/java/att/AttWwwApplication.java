@@ -10,7 +10,7 @@ public class AttWwwApplication
 {
 	public static void main(String[] args)
 	{
-		//SpringApplication.run(AttWwwApplication.class, args);
-		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+		SpringApplication.run(AttWwwApplication.class, args);
+		//AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 	}
 }

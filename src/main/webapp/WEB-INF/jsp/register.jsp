@@ -11,4 +11,18 @@
         <link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
         <title><s:message code="menu.register"/></title>
     </head>
+    <body>
+        <div class="container">
+        <from:from method ="POST" action="/addUser" modelAttribute="userDto">
+        <from:input class="form-control" path="id" hidden="true"/>
+
+        <div class="from-group">
+        <from:label path="Name">Name</from:label>
+        <from:input class="form-control" path="Name" required="true"/>
+        </div>
+
+            <from:button class="" type="submit" value="submit">Submit</from:button>
+        </from:form>
+        </div>
+    </body>
 </html>

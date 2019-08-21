@@ -10,13 +10,13 @@
 	</parent>
 	<groupId>att</groupId>
 	<artifactId>AttWww</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1</version>
 	<name>AttWww</name>
 	<packaging>war</packaging>
 	<description>System for customer</description>
 
 	<properties>
-		<java.version>12</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 
@@ -56,6 +56,13 @@
 			<version>5.4.4.Final</version>
 		</dependency>
 
+				<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>2.1.7.RELEASE</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -64,7 +71,8 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		</plugins>
+
+        </plugins>
 	</build>
 
 </project>
