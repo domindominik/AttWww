@@ -16,10 +16,14 @@
 	<description>System for customer</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>12</java.version>
 	</properties>
-
 	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -30,7 +34,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 			<version>2.1.7.RELEASE</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -52,11 +55,7 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>5.4.4.Final</version>
 		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>5.4.4.Final</version>
-		</dependency>
+
 	</dependencies>
 
 	<build>
