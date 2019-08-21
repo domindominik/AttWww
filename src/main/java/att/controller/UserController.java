@@ -27,13 +27,13 @@ public class UserController
     public String addUserWiev(Model model)
     {
         model.addAttribute("userDto", new UserDto());
-        return "register.jsp";
+        return "register";
     }
 
-    @PostMapping
+    @PostMapping(value = "/addUser")
     public String addUser(@Valid @ModelAttribute("userData") UserDto userDto, Model model)
     {
         this.userServices.createUser(userDto);
-        return "login.jsp";
+        return "login";
     }
 }
