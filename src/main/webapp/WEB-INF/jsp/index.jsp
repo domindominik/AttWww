@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>ATT System</title>
+    <title>Login</title>
 </head>
 <body>
 Spring boot menu
