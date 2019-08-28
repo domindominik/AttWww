@@ -1,18 +1,18 @@
 package att.controller;
 
+import att.db.Company;
 import att.dto.CompanyDto;
 import att.dto.UserDto;
 import att.services.CompanyServices;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
-@Controller
+@RestController
 public class CompanyController
 {
     private CompanyServices companyServices;
@@ -22,17 +22,16 @@ public class CompanyController
         this.companyServices = companyServices;
     }
 
-    @RequestMapping(value = "/addCompany", method = RequestMethod.GET)
-    public String addCompanyView(Model model)
+    @ResponseStatus(value = HttpStatus.CREATED)
+    @RequestMapping(value = "/company", method = RequestMethod.POST)
+    public void addCompanyView(@RequestBody @Valid CompanyDto companyDto)
     {
-        model.addAttribute("companyDto", new UserDto());
-        return "addcompany";
+        this.companyServices.createCompany(companyDto);
     }
 
-    @PostMapping(value = "/addCompany")
-    public String addUser(@Valid @ModelAttribute("userData") CompanyDto companyDto, Model model)
+    @RequestMapping(value = "/company", method = RequestMethod.GET)
+    public List<Company> companyDtoList()
     {
-        this.companyServices.createUser(companyDto);
-        return "addcompany";
+        return companyServices.findAll();
     }
 }
