@@ -17,10 +17,6 @@ public class Company
     private String name;
 
     @NotBlank
-    @Column(name = "surname", nullable = false)
-    private String surname;
-
-    @NotBlank
     @Column(name = "type", nullable = false)
     private int type;
 
@@ -58,10 +54,6 @@ public class Company
 
     public String getName() {
         return name;
-    }
-
-    public String getSurname() {
-        return surname;
     }
 
     public int getType() {
@@ -102,10 +94,6 @@ public class Company
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public void setType(int type) {
