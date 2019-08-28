@@ -32,6 +32,13 @@ public class CompanyController
     @RequestMapping(value = "/company", method = RequestMethod.GET)
     public List<Company> companyDtoList()
     {
-        return companyServices.findAll();
+        return this.companyServices.findAll();
     }
+
+    @RequestMapping(value = "/company/{id}", method = RequestMethod.GET)
+    public Company getCompanyById(@PathVariable int id)
+    {
+        return this.companyServices.getCompanyById(id);
+    }
+
 }
