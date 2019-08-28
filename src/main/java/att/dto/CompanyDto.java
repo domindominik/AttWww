@@ -25,7 +25,7 @@ public class CompanyDto
     private String zipcode;
 
     @NotNull
-    private String stock;
+    private int stock;
 
     @NotNull
     private String ticker;
@@ -61,7 +61,7 @@ public class CompanyDto
         return zipcode;
     }
 
-    public String getStock() {
+    public int getStock() {
         return stock;
     }
 
@@ -101,7 +101,7 @@ public class CompanyDto
         this.zipcode = zipcode;
     }
 
-    public void setStock(String stock) {
+    public void setStock(int stock) {
         this.stock = stock;
     }
 
